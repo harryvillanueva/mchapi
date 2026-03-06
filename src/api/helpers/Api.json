@@ -1,0 +1,885 @@
+{
+    "superadmin": [
+          { "method": "GET", "path": "/api/share/app/mch/apartments", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/app/mch/apartments/details/devices/locks", "filterstatus": 1 },
+          { "method": "POST", "path": "/api/share/app/mch/apartments/[id]/devices/[id]/actions", "filterstatus": 1 },
+
+          { "method": "GET", "path": "/api/share/profile", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/roles", "filterstatus": 1 },
+
+          { "method": "GET", "path": "/api/propietario/users/apartments", "filterstatus": -1 },
+          
+          { "method": "POST", "path": "/api/admin/users", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/admin/users", "filterstatus": -1 },
+          { "method": "GET", "path": "/api/admin/users/[id]", "filterstatus": -1 },
+          { "method": "PATCH", "path": "/api/admin/users/[id]", "filterstatus": -1 },
+          { "method": "DELETE", "path": "/api/admin/users/[id]", "filterstatus": -1 },
+
+          { "method": "GET", "path": "/api/auth/users/[id]/password/reset", "filterstatus": -1 },
+
+          { "method": "GET", "path": "/api/admin/apartments", "filterstatus": -1 },
+          { "method": "POST", "path": "/api/admin/apartments", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/admin/apartments/[id]", "filterstatus": -1 },
+          { "method": "PATCH", "path": "/api/admin/apartments/[id]", "filterstatus": -1 },
+          { "method": "DELETE", "path": "/api/admin/apartments/[id]", "filterstatus": -1 },
+
+          { "method": "GET", "path": "/api/propietario/users/[id]/apartments", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/rrhh/users", "filterstatus": 0 },
+
+          { "method": "GET", "path": "/api/share/data/totaldata", "filterstatus": -1 },
+          { "method": "GET", "path": "/api/share/p/users", "filterstatus": -1 },
+
+          { "method": "GET", "path": "/api/reports/ratic/devicereport/[id]", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/reportdevices/lastreport", "filterstatus" : 1},
+
+          { "method": "PATCH", "path": "/api/auth/users/[id]/password/change", "filterstatus": -1 },
+
+          { "method": "POST", "path": "/api/share/app/mch/fichar", "filterstatus": 1 }
+    ],
+
+    "admin": [
+          { "method": "GET", "path": "/api/share/app/mch/apartments", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/app/mch/apartments/details/devices/locks", "filterstatus": 1 },
+          { "method": "POST", "path": "/api/share/app/mch/apartments/[id]/devices/[id]/actions", "filterstatus": 1 },
+
+          { "method": "GET", "path": "/api/admin/users", "filterstatus": -1 },
+          { "method": "POST", "path": "/api/admin/users", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/admin/users/[id]", "filterstatus": -1 },
+          { "method": "PATCH", "path": "/api/admin/users/[id]", "filterstatus": -1 },
+          { "method": "DELETE", "path": "/api/admin/users/[id]", "filterstatus": -1 },
+          
+          { "method": "GET", "path": "/api/share/profile", "filterstatus": 1 },
+
+          { "method": "GET", "path": "/api/admin/apartments", "filterstatus": -1 },
+          { "method": "POST", "path": "/api/admin/apartments", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/admin/apartments/[id]", "filterstatus": -1 },
+          { "method": "PATCH", "path": "/api/admin/apartments/[id]", "filterstatus": -1 },
+          { "method": "DELETE", "path": "/api/admin/apartments/[id]", "filterstatus": -1 },
+
+          { "method": "GET", "path": "/api/admin/roles/[id]/users", "filterstatus": -1 },
+
+          { "method": "GET", "path": "/api/admin/keys", "filterstatus": -1 },
+          { "method": "POST", "path": "/api/admin/keys", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/admin/keys/[id]", "filterstatus": -1 },
+          { "method": "PATCH", "path": "/api/admin/keys/[id]", "filterstatus": -1 },
+          { "method": "DELETE", "path": "/api/admin/keys/[id]", "filterstatus": -1 },
+          { "method": "GET", "path": "/api/admin/keys/[id]/locks", "filterstatus": -1 },
+
+          { "method": "GET", "path": "/api/share/data/totaldata", "filterstatus": 0 },
+          { "method": "GET", "path": "/api/share/p/users", "filterstatus": 0 },
+
+          { "method": "GET", "path": "/api/reports/ratic/devicereport/[id]", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/reportdevices/lastreport", "filterstatus" : 1},
+
+          { "method": "POST", "path": "/api/share/app/mch/fichar", "filterstatus": 1 }
+    ],
+
+    "propietario": [
+          { "method": "GET", "path": "/api/propietario/users", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/profile", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/propietario/users/[id]/apartments", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/propietario/users/[id]/apartments/[id]", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/propietario/users/[id]/apartments", "filterstatus": 1 },
+
+          { "method": "POST", "path": "/api/share/app/mch/apartments/[id]/devices/[id]/actions", "filterstatus": 1 }
+    ],
+
+    "rrhh": [
+          { "method": "GET", "path": "/api/share/app/mch/apartments", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/app/mch/apartments/details/devices/locks", "filterstatus": 1 },
+          { "method": "POST", "path": "/api/share/app/mch/apartments/[id]/devices/[id]/actions", "filterstatus": 1 },
+
+          { "method": "GET", "path": "/api/share/users", "filterstatus": 0 },
+          { "method": "GET", "path": "/api/share/roles", "filterstatus": 0 },
+          { "method": "GET", "path": "/api/share/profile", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/rrhh/users", "filterstatus": 0 },
+          { "method": "POST", "path": "/api/rrhh/users", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/rrhh/users/[id]", "filterstatus": 0 },
+          { "method": "PATCH", "path": "/api/rrhh/users/[id]", "filterstatus": 0 },
+          { "method": "DELETE", "path": "/api/rrhh/users/[id]", "filterstatus": 0 },
+          { "method": "DELETE", "path": "/api/rrhh/users/rrhh/[id]", "filterstatus": 0 },
+
+          { "method": "GET", "path": "/api/share/apartments", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/p/apartments", "filterstatus": 1 },
+
+
+          { "method": "GET", "path": "/api/rrhh/p/users", "filterstatus": 0 },
+          { "method" : "GET" , "path" : "/api/share/data/totaldata" , "filterstatus" : 1},
+      
+
+          { "method": "GET", "path": "/api/auth/users/[id]/password/reset", "filterstatus": 0 },
+
+          { "method": "GET", "path": "/api/reports/ratic/devicereport/[id]", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/reportdevices/lastreport", "filterstatus" : 1},
+
+          { "method": "POST", "path": "/api/share/app/mch/fichar", "filterstatus": 1 },
+
+          { "method": "GET", "path": "/api/share/data/dataselect", "filterstatus": 1 },
+
+          { "method": "GET", "path": "/api/rrhh/p/fichajeoficina", "filterstatus": 1 },
+
+          { "method": "GET", "path": "/api/rrhh/fichajeoficina/[id]", "filterstatus": 1 },
+          { "method": "POST", "path": "/api/rrhh/fichajeoficina", "filterstatus": 1 },
+          { "method": "PATCH", "path": "/api/rrhh/fichajeoficina/[id]", "filterstatus": 1 },
+          { "method": "DELETE", "path": "/api/rrhh/fichajeoficina/[id]", "filterstatus": 0 },
+
+          {"method": "GET" , "path": "/api/rrhh/esquema", "filterstatus" : 1},
+          {"method" : "PATCH" , "path": "/api/rrhh/esquema/[id]" , "filterstatus" : 1},
+         
+          {"method" : "POST", "path": "/api/share/vacaciones", "filterstatus": 1},
+          {"method" : "GET", "path": "/api/share/vacaciones", "filterstatus": 1},
+          {"method" : "GET", "path": "/api/share/vacaciones/[id]", "filterstatus": 1},
+          {"method" : "PATCH", "path": "/api/share/vacaciones/[id]", "filterstatus": 1}
+    ],
+
+    "rrhhmaster": [
+          { "method": "GET", "path": "/api/share/app/mch/apartments", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/app/mch/apartments/details/devices/locks", "filterstatus": 1 },
+          { "method": "POST", "path": "/api/share/app/mch/apartments/[id]/devices/[id]/actions", "filterstatus": 1 },
+
+          { "method": "GET", "path": "/api/share/users", "filterstatus": 0 },
+          { "method": "GET", "path": "/api/share/roles", "filterstatus": 0 },
+          { "method": "GET", "path": "/api/share/profile", "filterstatus": 1 },
+
+          { "method": "GET", "path": "/api/rrhh/users", "filterstatus": 0 },
+          { "method": "POST", "path": "/api/rrhh/users", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/rrhh/users/[id]", "filterstatus": 0 },
+          { "method": "PATCH", "path": "/api/rrhh/users/[id]", "filterstatus": 0 },
+          { "method": "DELETE", "path": "/api/rrhh/users/[id]", "filterstatus": 0 },
+
+
+          { "method": "DELETE", "path": "/api/rrhh/users/delete/[id]", "filterstatus": 0 },
+
+          { "method": "GET", "path": "/api/dn/users/responsables", "filterstatus": 0 },
+
+          { "method": "GET", "path": "/api/dn/leads/responsables", "filterstatus": 0 },
+          { "method": "POST", "path": "/api/dn/leads/responsables", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/dn/leads/responsables/[id]", "filterstatus": 0 },
+          { "method": "PATCH", "path": "/api/dn/leads/responsables/[id]", "filterstatus": 0 },
+
+          { "method": "GET", "path": "/api/share/categoria", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/tiporesponsable", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/tipoavance", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/tipointeresa", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/tipoocupacion", "filterstatus": 1 },
+          
+          { "method": "GET", "path": "/api/share/leads", "filterstatus": 0 },
+          { "method": "POST", "path": "/api/share/leads", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/leads/[id]", "filterstatus": 0 },
+          { "method": "PATCH", "path": "/api/share/leads/[id]", "filterstatus": 0 },
+
+          { "method": "GET", "path": "/api/dn/leads/myleads", "filterstatus": 0 },
+          { "method": "GET", "path": "/api/dn/leads/myleads/[id]", "filterstatus": 0 },
+          { "method": "PATCH", "path": "/api/dn/leads/myleads/[id]", "filterstatus": 0 },
+
+          { "method": "GET", "path": "/api/share/data/moverleads", "filterstatus": 1 },
+
+          { "method": "GET", "path": "/api/dn/users/[id]/sucesos", "filterstatus": 1 },
+          { "method": "POST", "path": "/api/dn/users/[id]/sucesos", "filterstatus": 1 },
+
+          { "method": "GET", "path": "/api/dn/grupo/prescriptores", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/dn/grupo/[id]/prescriptores", "filterstatus": 1 },
+          { "method": "PATCH", "path": "/api/dn/grupo/[id]/prescriptores", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/dn/sucess/grupo/[id]/prescriptores", "filterstatus": 1 },
+
+          { "method": "GET", "path": "/api/dn/grupo/propietarios", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/dn/grupo/[id]/propietarios", "filterstatus": 1 },
+          { "method": "PATCH", "path": "/api/dn/grupo/[id]/propietarios", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/dn/sucess/grupo/[id]/propietarios", "filterstatus": 1 },
+
+          { "method": "GET", "path": "/api/share/apartments", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/p/apartments", "filterstatus": 1 },
+
+          { "method": "GET", "path": "/api/share/data/totaldata", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/p/leads", "filterstatus": 0 },
+          { "method": "GET", "path": "/api/share/p/myleads", "filterstatus": 0 },
+
+          { "method": "GET", "path": "/api/rrhh/p/users", "filterstatus": 0 },
+          { "method" : "GET" , "path" : "/api/share/data/totaldata" , "filterstatus" : 1},
+
+          { "method": "GET", "path": "/api/auth/users/[id]/password/reset", "filterstatus": 0 },
+
+          { "method": "GET", "path": "/api/reports/ratic/devicereport/[id]", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/reportdevices/lastreport", "filterstatus" : 1},
+
+          { "method": "POST", "path": "/api/share/app/mch/fichar", "filterstatus": 1 },
+
+          { "method": "GET", "path": "/api/share/data/dataselect", "filterstatus": 1 },
+
+          { "method": "GET", "path": "/api/rrhh/p/fichajeoficina", "filterstatus": 1 },
+          
+          { "method": "GET", "path": "/api/rrhh/fichajeoficina/[id]", "filterstatus": 1 },
+          { "method": "POST", "path": "/api/rrhh/fichajeoficina", "filterstatus": 1 },
+          { "method": "PATCH", "path": "/api/rrhh/fichajeoficina/[id]", "filterstatus": 1 },
+          { "method": "DELETE", "path": "/api/rrhh/fichajeoficina/[id]", "filterstatus": 0 },
+
+          
+          {"method": "GET" , "path": "/api/rrhh/esquema", "filterstatus" : 1},
+          {"method" : "PATCH" , "path": "/api/rrhh/esquema/[id]" , "filterstatus" : 1},
+          {"method" : "GET" , "path" : "/api/rrhh/esquema/p" , "filterstatus" : 1},
+
+          {"method": "GET" , "path": "/api/rrhh/vacaciones", "filterstatus": 1},
+          {"method" : "GET" , "path": "/api/rrhh/vacaciones/[id]", "filterstatus": 1},
+          {"method" : "POST", "path": "/api/rrhh/vacaciones", "filterstatus": 1},
+          { "method": "PATCH", "path": "/api/rrhh/vacaciones/[id]", "filterstatus": 1 },
+          {"method": "DELETE", "path": "/api/rrhh/vacaciones/[id]", "filterstatus": 0},
+          {"method" : "GET" , "path" : "/api/rrhh/vacaciones/p", "filterstatus":1},
+
+
+          {"method" : "POST", "path": "/api/share/vacaciones", "filterstatus": 1},
+          {"method" : "GET", "path": "/api/share/vacaciones", "filterstatus": 1},
+          {"method" : "GET", "path": "/api/share/vacaciones/[id]", "filterstatus": 1},
+          {"method" : "PATCH", "path": "/api/share/vacaciones/[id]", "filterstatus": 1}
+    ],
+
+    "crm": [
+          { "method": "GET", "path": "/api/share/app/mch/apartments", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/app/mch/apartments/details/devices/locks", "filterstatus": 1 },
+          { "method": "POST", "path": "/api/share/app/mch/apartments/[id]/devices/[id]/actions", "filterstatus": 1 },
+          
+          { "method": "GET", "path": "/api/share/profile", "filterstatus": 1 },
+
+          { "method": "GET", "path": "/api/share/apartments", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/p/apartments", "filterstatus": 1 },
+
+          { "method": "GET", "path": "/api/reports/ratic/devicereport/[id]", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/reportdevices/lastreport", "filterstatus" : 1},
+
+          { "method": "POST", "path": "/api/share/app/mch/fichar", "filterstatus": 1 },
+
+          { "method": "GET", "path": "/api/share/data/totaldata", "filterstatus": 1 },
+          {"method" : "POST", "path": "/api/share/vacaciones", "filterstatus": 1},
+          {"method" : "GET", "path": "/api/share/vacaciones", "filterstatus": 1},
+          {"method" : "GET", "path": "/api/share/vacaciones/[id]", "filterstatus": 1},
+          {"method" : "PATCH", "path": "/api/share/vacaciones/[id]", "filterstatus": 1}
+
+
+    ],
+
+    "default": [
+          { "method": "GET", "path": "/api/share/app/mch/apartments", "filterstatus": 1 },
+
+          { "method": "GET", "path": "/api/share/profile", "filterstatus": 1 }
+    ],
+
+    "dn": [
+          { "method": "GET", "path": "/api/share/app/mch/apartments", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/app/mch/apartments/details/devices/locks", "filterstatus": 1 },
+          { "method": "POST", "path": "/api/share/app/mch/apartments/[id]/devices/[id]/actions", "filterstatus": 1 },
+
+          { "method": "GET", "path": "/api/share/profile", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/roles", "filterstatus": 1 },
+          
+          { "method": "GET", "path": "/api/dn/apartments", "filterstatus": 0 },
+          { "method": "POST", "path": "/api/dn/apartments", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/dn/apartments/[id]", "filterstatus": 0 },
+          { "method": "PATCH", "path": "/api/dn/apartments/[id]", "filterstatus": 0 },
+          { "method": "DELETE", "path": "/api/dn/apartments/[id]", "filterstatus": 0 },
+          
+          { "method": "GET", "path": "/api/dn/users", "filterstatus": 0 },
+          { "method": "POST", "path": "/api/dn/users", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/dn/users/[id]", "filterstatus": 0 },
+          { "method": "PATCH", "path": "/api/dn/users/[id]", "filterstatus": 0 },
+          { "method": "DELETE", "path": "/api/admin/users/[id]", "filterstatus": 0 },
+
+          { "method": "GET", "path": "/api/share/categoria", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/tiporesponsable", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/tipoavance", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/tipointeresa", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/tipoocupacion", "filterstatus": 1 },
+
+          { "method": "GET", "path": "/api/dn/leads/myleads", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/dn/leads/myleads/[id]", "filterstatus": 1 },
+          { "method": "PATCH", "path": "/api/dn/leads/myleads/[id]", "filterstatus": 1 },
+
+          { "method": "GET", "path": "/api/share/apartments", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/p/apartments", "filterstatus": 1 },
+
+          { "method": "GET", "path": "/api/share/data/totaldata", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/p/leads", "filterstatus": 0 },
+          { "method": "GET", "path": "/api/share/p/myleads", "filterstatus": 0 },
+
+          { "method": "GET", "path": "/api/dn/p/responsables", "filterstatus": 0 },
+
+          { "method": "GET", "path": "/api/reports/ratic/devicereport/[id]", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/reportdevices/lastreport", "filterstatus" : 1},
+
+          { "method": "PATCH", "path": "/api/dn/grupo/[id]/prescriptores/delete", "filterstatus": 0 },
+          { "method": "PATCH", "path": "/api/dn/grupo/[id]/propietarios/delete", "filterstatus": 0 },
+
+          { "method" : "GET" , "path": "/api/dn/estadisticas/estadistica" , "filterstatus" : 1},
+          { "method" : "GET" , "path": "/api/dn/estadisticas/current" , "filterstatus" : 1},
+          { "method" : "POST" , "path": "/api/dn/estadisticas/estadistica" , "filterstatus" : 1},
+          { "method" : "GET" , "path": "/api/dn/estadisticas/historial" , "filterstatus" : 1},
+
+          { "method": "POST", "path": "/api/share/app/mch/fichar", "filterstatus": 1 },
+
+          {"method" : "POST", "path": "/api/share/vacaciones", "filterstatus": 1},
+          {"method" : "GET", "path": "/api/share/vacaciones", "filterstatus": 1},
+          {"method" : "GET", "path": "/api/share/vacaciones/[id]", "filterstatus": 1},
+          {"method" : "PATCH", "path": "/api/share/vacaciones/[id]", "filterstatus": 1}
+
+
+    ],
+
+    "dnmaster": [
+          { "method": "GET", "path": "/api/share/app/mch/apartments", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/app/mch/apartments/details/devices/locks", "filterstatus": 1 },
+          { "method": "POST", "path": "/api/share/app/mch/apartments/[id]/devices/[id]/actions", "filterstatus": 1 },
+
+          { "method": "GET", "path": "/api/share/profile", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/roles", "filterstatus": 1 },
+          
+          { "method": "GET", "path": "/api/dn/apartments", "filterstatus": 0 },
+          { "method": "POST", "path": "/api/dn/apartments", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/dn/apartments/[id]", "filterstatus": 0 },
+          { "method": "PATCH", "path": "/api/dn/apartments/[id]", "filterstatus": 0 },
+          { "method": "DELETE", "path": "/api/dn/apartments/[id]", "filterstatus": 0 },
+          
+          { "method": "GET", "path": "/api/dn/users", "filterstatus": 0 },
+          { "method": "POST", "path": "/api/dn/users", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/dn/users/[id]", "filterstatus": 1 },
+          { "method": "PATCH", "path": "/api/dn/users/[id]", "filterstatus": 1 },
+          { "method": "DELETE", "path": "/api/admin/users/[id]", "filterstatus": 1 },
+
+          { "method": "GET", "path": "/api/dn/users/responsables", "filterstatus": 0 },
+
+          { "method": "GET", "path": "/api/dn/leads/responsables", "filterstatus": 0 },
+          { "method": "POST", "path": "/api/dn/leads/responsables", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/dn/leads/responsables/[id]", "filterstatus": 0 },
+          { "method": "PATCH", "path": "/api/dn/leads/responsables/[id]", "filterstatus": 0 },
+
+          { "method": "GET", "path": "/api/share/categoria", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/tiporesponsable", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/tipoavance", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/tipointeresa", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/tipoocupacion", "filterstatus": 1 },
+          
+          { "method": "GET", "path": "/api/share/leads", "filterstatus": 0 },
+          { "method": "POST", "path": "/api/share/leads", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/leads/[id]", "filterstatus": 0 },
+          { "method": "PATCH", "path": "/api/share/leads/[id]", "filterstatus": 0 },
+
+          { "method": "GET", "path": "/api/dn/leads/myleads", "filterstatus": 0 },
+          { "method": "GET", "path": "/api/dn/leads/myleads/[id]", "filterstatus": 0 },
+          { "method": "PATCH", "path": "/api/dn/leads/myleads/[id]", "filterstatus": 0 },
+
+          { "method": "GET", "path": "/api/share/data/moverleads", "filterstatus": 1 },
+
+          { "method": "GET", "path": "/api/dn/users/[id]/sucesos", "filterstatus": 1 },
+          { "method": "POST", "path": "/api/dn/users/[id]/sucesos", "filterstatus": 1 },
+
+          { "method": "GET", "path": "/api/dn/grupo/prescriptores", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/dn/grupo/[id]/prescriptores", "filterstatus": 1 },
+          { "method": "PATCH", "path": "/api/dn/grupo/[id]/prescriptores", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/dn/sucess/grupo/[id]/prescriptores", "filterstatus": 1 },
+
+          { "method": "GET", "path": "/api/dn/grupo/propietarios", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/dn/grupo/[id]/propietarios", "filterstatus": 1 },
+          { "method": "PATCH", "path": "/api/dn/grupo/[id]/propietarios", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/dn/sucess/grupo/[id]/propietarios", "filterstatus": 1 },
+
+          { "method": "GET", "path": "/api/share/apartments", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/p/apartments", "filterstatus": 1 },
+
+          { "method": "GET", "path": "/api/share/data/totaldata", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/p/leads", "filterstatus": 0 },
+          { "method": "GET", "path": "/api/share/p/myleads", "filterstatus": 0 },
+
+          { "method": "GET", "path": "/api/dn/p/responsables", "filterstatus": 0 },
+
+          { "method": "GET", "path": "/api/reports/ratic/devicereport/[id]", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/reportdevices/lastreport", "filterstatus" : 1},
+
+          { "method": "PATCH", "path": "/api/dn/grupo/[id]/prescriptores/delete", "filterstatus": 0 },
+          { "method": "PATCH", "path": "/api/dn/grupo/[id]/propietarios/delete", "filterstatus": 0 },
+
+          { "method" : "GET" , "path": "/api/dn/estadisticas/estadistica" , "filterstatus" : 1},
+          { "method" : "GET" , "path": "/api/dn/estadisticas/current" , "filterstatus" : 1},
+          { "method" : "POST" , "path": "/api/dn/estadisticas/estadistica" , "filterstatus" : 1},
+          { "method" : "GET" , "path": "/api/dn/estadisticas/historial" , "filterstatus" : 1},
+
+          { "method" : "GET" , "path": "/api/dn/p/grupo/prescriptor" , "filterstatus" : 1},
+          { "method" : "GET" , "path": "/api/dn/p/grupo/propietario" , "filterstatus" : 1},
+
+          { "method": "POST", "path": "/api/share/app/mch/fichar", "filterstatus": 1 },
+
+          {"method" : "POST", "path": "/api/share/vacaciones", "filterstatus": 1},
+          {"method" : "GET", "path": "/api/share/vacaciones", "filterstatus": 1},
+          {"method" : "GET", "path": "/api/share/vacaciones/[id]", "filterstatus": 1},
+          {"method" : "PATCH", "path": "/api/share/vacaciones/[id]", "filterstatus": 1}
+
+    ],
+
+    "ceo": [
+          { "method": "GET", "path": "/api/share/app/mch/apartments", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/app/mch/apartments/details/devices/locks", "filterstatus": 1 },
+          { "method": "POST", "path": "/api/share/app/mch/apartments/[id]/devices/[id]/actions", "filterstatus": 1 },
+
+          { "method": "GET", "path": "/api/share/profile", "filterstatus": 1 },
+          
+          { "method": "GET", "path": "/api/share/categoria", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/tiporesponsable", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/tipoavance", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/tipointeresa", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/tipoocupacion", "filterstatus": 1 },
+
+          { "method": "GET", "path": "/api/dn/leads/myleads", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/dn/leads/myleads/[id]", "filterstatus": 1 },
+          { "method": "PATCH", "path": "/api/dn/leads/myleads/[id]", "filterstatus": 1 },
+
+          { "method": "GET", "path": "/api/share/apartments", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/p/apartments", "filterstatus": 1 },
+
+          { "method": "GET", "path": "/api/reports/ratic/devicereport/[id]", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/reportdevices/lastreport", "filterstatus" : 1},
+
+          { "method": "POST", "path": "/api/share/app/mch/fichar", "filterstatus": 1 }
+    ],
+
+    "atic": [
+          { "method": "GET", "path": "/api/share/app/mch/apartments", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/app/mch/apartments/details/devices/locks", "filterstatus": 1 },
+          { "method": "POST", "path": "/api/share/app/mch/apartments/[id]/devices/[id]/actions", "filterstatus": 1 },
+
+          { "method": "GET", "path": "/api/reports/roleade/controlhorario", "filterstatus": 0 },
+
+          { "method": "GET", "path": "/api/share/profile", "filterstatus": 1 },
+
+          { "method": "GET", "path": "/api/share/apartments", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/p/apartments", "filterstatus": 1 },
+
+          { "method": "GET", "path": "/api/dn/users/responsables", "filterstatus": 0 },
+          
+          { "method": "POST", "path": "/api/dn/leads/responsables", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/dn/leads/responsables/[id]", "filterstatus": -1 },
+          { "method": "PATCH", "path": "/api/dn/leads/responsables/[id]", "filterstatus": -1 },
+
+          { "method": "GET", "path": "/api/share/data/totaldata", "filterstatus": -1 },
+
+          { "method": "GET", "path": "/api/share/data/dataselect", "filterstatus": -1 },
+
+          { "method": "GET", "path": "/api/dn/p/responsables", "filterstatus": -1 },
+          { "method": "GET", "path": "/api/atic/p/devices", "filterstatus": -1 },
+          { "method": "GET", "path": "/api/atic/devices/report", "filterstatus": -1 },
+          { "method": "POST", "path": "/api/atic/devices/report", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/atic/p/reportdevices", "filterstatus": 1 },
+          { "method": "PATCH", "path": "/api/atic/p/devices/[id]", "filterstatus" : -1},
+          { "method" : "PATCH" , "path" : "/api/atic/devices/report/[id]/details/[id]" , "filterstatus": 0},
+          { "method": "GET", "path": "/api/reports/ratic/devicereport/[id]", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/reportdevices/lastreport", "filterstatus" : 1},
+
+          { "method" : "POST" , "path" : "/api/atic/devices/crud" , "filterstatus" : 1},
+          { "method" : "PATCH" , "path" : "/api/atic/devices/crud/[id]" , "filterstatus" : 1},
+          { "method" : "DELETE" , "path" : "/api/atic/devices/crud/[id]" , "filterstatus" : 1},
+          { "method" : "GET" , "path" : "/api/atic/devices/crud/[id]" , "filterstatus" : 1},
+          { "method" : "POST" , "path": "/api/dn/estadisticas/estadistica" , "filterstatus" : 1},
+          { "method" : "POST" , "path": "/api/dn/estadisticas/estadistica" , "filterstatus" : 1},
+          { "method" : "GET" , "path": "/api/atic/p/keys" , "filterstatus" : -1},
+          { "method" : "POST" , "path" : "/api/atic/p/keys" , "filterstatus" : 1 },
+          { "method" : "PATCH" , "path" : "/api/atic/p/keys/[id]" , "filterstatus" : 1},
+          { "method" : "DELETE" , "path" : "/api/atic/p/keys/[id]" , "filterstatus" : 1},
+          { "method" : "GET" , "path" : "/api/atic/p/keys/[id]" , "filterstatus" : 1},
+          { "method": "POST", "path": "/api/share/app/mch/fichar", "filterstatus": 1 },
+          { "method": "POST", "path": "/api/public/fichar/validatetokenqr", "filterstatus": 1 },
+
+          {"method" : "POST", "path": "/api/share/vacaciones", "filterstatus": 1},
+          {"method" : "GET", "path": "/api/share/vacaciones", "filterstatus": 1},
+          {"method" : "GET", "path": "/api/share/vacaciones/[id]", "filterstatus": 1},
+          {"method" : "PATCH", "path": "/api/share/vacaciones/[id]", "filterstatus": 1}
+
+    ],
+
+    "oficina": [
+          { "method": "GET", "path": "/api/share/app/mch/apartments", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/app/mch/apartments/details/devices/locks", "filterstatus": 1 },
+
+          { "method": "GET", "path": "/api/share/profile", "filterstatus": 1 },
+
+          { "method": "POST", "path": "/api/share/app/mch/apartments/[id]/devices/[id]/actions", "filterstatus": 1 },
+
+          { "method": "GET", "path": "/api/share/apartments", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/p/apartments", "filterstatus": 1 }
+
+    ],
+
+    "rmg": [
+          { "method": "GET", "path": "/api/share/app/mch/apartments", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/app/mch/apartments/details/devices/locks", "filterstatus": 1 },
+
+          { "method": "GET", "path": "/api/share/profile", "filterstatus": 1 },
+
+          { "method": "GET", "path": "/api/share/plataformacomercial", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/tipoestancia", "filterstatus": 1 },
+
+          { "method": "GET", "path": "/api/rmg/apartments/[id]/infocomercial", "filterstatus": 1 },
+          { "method": "POST", "path": "/api/rmg/apartments/[id]/infocomercial", "filterstatus": 1 },
+          { "method": "PATCH", "path": "/api/rmg/apartments/[id]/infocomercial", "filterstatus": 1 },
+
+          { "method": "GET", "path": "/api/share/apartments", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/p/apartments", "filterstatus": 1 },
+
+          { "method": "GET", "path": "/api/rmg/infocomercial", "filterstatus": 1 },
+          { "method": "POST", "path": "/api/rmg/infocomercial", "filterstatus": 1 },
+          { "method": "PATCH", "path": "/api/rmg/infocomercial", "filterstatus": 1 },
+
+          { "method": "GET", "path": "/api/rmg/apartments/[id]/variablesreserva", "filterstatus": 1 },
+          { "method": "PATCH", "path": "/api/rmg/apartments/[id]/infocomercial/[id]/variablesreserva", "filterstatus": 1 },
+
+          { "method": "POST", "path": "/api/share/app/mch/apartments/[id]/devices/[id]/actions", "filterstatus": 1 },
+
+          { "method": "GET", "path": "/api/reports/ratic/devicereport/[id]", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/reportdevices/lastreport", "filterstatus" : 1},
+
+          { "method": "POST", "path": "/api/share/app/mch/fichar", "filterstatus": 1 },
+
+
+          { "method" : "GET" , "path" : "/api/rmg/p/apartments" , "filterstatus": 1},
+          { "method": "GET", "path": "/api/share/data/totaldata", "filterstatus": 1 },
+
+          {"method" : "POST", "path": "/api/share/vacaciones", "filterstatus": 1},
+          {"method" : "GET", "path": "/api/share/vacaciones", "filterstatus": 1},
+          {"method" : "GET", "path": "/api/share/vacaciones/[id]", "filterstatus": 1},
+          {"method" : "PATCH", "path": "/api/share/vacaciones/[id]", "filterstatus": 1},
+
+          {"method" : "GET", "path": "/api/rmg/p/solicitudes/limiteprecio", "filterstatus": 1},
+          {"method" : "GET", "path": "/api/rmg/limiteprecio/[id]", "filterstatus": 1},
+          {"method" : "PATCH", "path": "/api/rmg/limiteprecio/[id]/aprobar", "filterstatus": 1},
+          {"method" : "PATCH", "path": "/api/rmg/limiteprecio/[id]/rechazar", "filterstatus": 1}
+    ],
+
+    "colaborador": [
+          { "method": "GET", "path": "/api/share/profile", "filterstatus": 1 },
+
+          { "method": "GET", "path": "/api/share/data/totaldata", "filterstatus": 0 },
+          { "method": "GET", "path": "/api/colaborador/p/apartments", "filterstatus": 1 }
+    ],
+
+    "limpieza": [
+          { "method": "GET", "path": "/api/share/app/mch/apartments", "filterstatus": 1 },
+          
+          { "method": "GET", "path": "/api/share/app/mch/apartments/details/devices/locks", "filterstatus": 1 },
+          
+          { "method": "POST", "path": "/api/share/app/mch/apartments/[id]/devices/[id]/actions", "filterstatus": 1 },
+          { "method": "POST", "path": "/api/share/app/mch/apartments/[id]/controlhorario/entrada", "filterstatus": 1 },
+          { "method": "PATCH", "path": "/api/share/app/mch/apartments/[id]/controlhorario/salida", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/app/mch/controlhorario/currentactive", "filterstatus": 1 }
+    ],
+
+    "da": [
+          { "method": "GET", "path": "/api/share/profile", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/app/mch/apartments/details/devices/locks", "filterstatus": 1 },
+
+          { "method": "GET", "path": "/api/da/apartments", "filterstatus": 0 },
+          { "method": "POST", "path": "/api/da/apartments", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/da/apartments/[id]", "filterstatus": 0 },
+          { "method": "PATCH", "path": "/api/da/apartments/[id]", "filterstatus": 0 },
+          { "method": "DELETE", "path": "/api/da/apartments/[id]", "filterstatus": 0 },
+          
+          {"method" : "GET" , "path" : "/api/share/apartments" , "filterstatus" : 1},
+          { "method": "GET", "path": "/api/share/p/apartments", "filterstatus": 1 },
+
+          {"method" : "GET", "path" : "/api/da/p/apartments", "filterstatus": 1},
+
+          { "method": "GET", "path": "/api/share/users/propietarios", "filterstatus": 1 },
+
+          { "method": "GET", "path": "/api/share/app/mch/apartments", "filterstatus": 1 },
+          { "method": "POST", "path": "/api/share/app/mch/apartments/[id]/devices/[id]/actions", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/da/dispositivos/disponibles", "filterstatus": 1 },
+
+          { "method": "PATCH", "path": "/api/da/apartments/[id]/associate_devices", "filterstatus":1  },
+
+          { "method": "GET", "path": "/api/reports/ratic/devicereport/[id]", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/reportdevices/lastreport", "filterstatus" : 1},
+
+
+          { "method" : "GET", "path" : "/api/da/articulos", "filterstatus" : 0},
+          { "method" : "POST" , "path": "/api/da/articulos" , "filterstatus" : 1},
+          { "method" : "PATCH", "path": "/api/da/articulos/[id]", "filterstatus" : 0},
+          { "method" : "DELETE", "path" : "/api/da/articulos/[id]" , "filterstatus": 0},
+          { "method" : "GET", "path" : "/api/da/articulos/p/articulos" , "filterstatus" : 0},
+
+
+          { "method" : "GET", "path" : "/api/da/inventario/p/inventario" ,  "filterstatus" : 0},
+          { "method" : "GET", "path" : "/api/da/inventario/piso/[id]" ,  "filterstatus" : 0},
+          { "method" : "PATCH", "path" : "/api/da/inventario" ,  "filterstatus" : 0}, 
+          { "method" : "PATCH", "path" : "/api/da/inventario/articuloComprado" , "filterstatus" : 0}, 
+          { "method" : "PATCH" , "path" : "/api/da/inventario/reparar" , "filterstatus" : 0}, 
+          { "method" : "PATCH" , "path" : "/api/da/inventario/roto" , "filterstatus" : 0},
+          
+
+          { "method": "PATCH", "path": "/api/da/apartments/[id]/associate_devices", "filterstatus":1  },
+          { "method": "GET", "path": "/api/share/data/totaldata", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/data/dataselect", "filterstatus": 1 },
+
+          { "method": "GET", "path": "/api/da/apartments/[id]/devices/asociar", "filterstatus": -1 },
+
+          { "method": "POST", "path": "/api/share/app/mch/fichar", "filterstatus": 1 },
+
+          {"method" : "POST", "path": "/api/share/vacaciones", "filterstatus": 1},
+          {"method" : "GET", "path": "/api/share/vacaciones", "filterstatus": 1},
+          {"method" : "GET", "path": "/api/share/vacaciones/[id]", "filterstatus": 1},
+          {"method" : "PATCH", "path": "/api/share/vacaciones/[id]", "filterstatus": 1}
+
+    ],
+
+    "ade": [
+          { "method": "GET", "path": "/api/share/profile", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/app/mch/apartments/details/devices/locks", "filterstatus": 1 },
+
+          { "method": "GET", "path": "/api/share/data/totaldata", "filterstatus": 0 },
+          { "method": "GET", "path": "/api/ade/p/controlhorario", "filterstatus": 0 },
+
+          { "method": "GET", "path": "/api/share/data/dataselect", "filterstatus": 0 },
+          { "method": "GET", "path": "/api/ade/controlhorario/[id]", "filterstatus": 0 },
+          { "method": "POST", "path": "/api/ade/controlhorario", "filterstatus": 1 },
+          { "method": "PATCH", "path": "/api/ade/controlhorario/[id]", "filterstatus": 0 },
+          { "method": "DELETE", "path": "/api/ade/controlhorario/[id]", "filterstatus": 0 },
+
+          { "method": "GET", "path": "/api/reports/roleade/controlhorario", "filterstatus": 0 },
+          { "method": "GET", "path": "/api/reports/roleade/users/[id]/controlhorario", "filterstatus": 0 },
+          { "method": "GET", "path": "/api/share/users/ulimpieza", "filterstatus": 0 },
+          
+          { "method": "GET", "path": "/api/share/app/mch/apartments", "filterstatus": 1 },
+          { "method": "POST", "path": "/api/share/app/mch/apartments/[id]/devices/[id]/actions", "filterstatus": 1 },
+
+          { "method": "GET", "path": "/api/share/apartments", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/p/apartments", "filterstatus": 1 },
+
+
+          { "method": "GET", "path": "/api/reports/ratic/devicereport/[id]", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/reportdevices/lastreport", "filterstatus" : 1},
+
+          { "method": "POST", "path": "/api/share/app/mch/fichar", "filterstatus": 1 },
+
+          {"method" : "POST", "path": "/api/share/vacaciones", "filterstatus": 1},
+          {"method" : "GET", "path": "/api/share/vacaciones", "filterstatus": 1},
+          {"method" : "GET", "path": "/api/share/vacaciones/[id]", "filterstatus": 1},
+          {"method" : "PATCH", "path": "/api/share/vacaciones/[id]", "filterstatus": 1}
+
+    ],
+
+    "mantenimiento": [
+          { "method": "GET", "path": "/api/share/app/mch/apartments", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/app/mch/apartments/details/devices/locks", "filterstatus": 1 },
+
+          { "method": "POST", "path": "/api/share/app/mch/apartments/[id]/devices/[id]/actions", "filterstatus": 1 },
+
+          { "method": "GET", "path": "/api/share/apartments", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/p/apartments", "filterstatus": 1 }
+
+    ], 
+
+    "crmmaster": [
+          { "method": "GET", "path": "/api/share/app/mch/apartments", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/app/mch/apartments/details/devices/locks", "filterstatus": 1 },
+          { "method": "POST", "path": "/api/share/app/mch/apartments/[id]/devices/[id]/actions", "filterstatus": 1 },
+          
+          { "method": "GET", "path": "/api/share/profile", "filterstatus": 1 },
+
+          { "method": "GET", "path": "/api/share/apartments", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/p/apartments", "filterstatus": 1 },
+
+          { "method": "GET", "path": "/api/reports/ratic/devicereport/[id]", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/reportdevices/lastreport", "filterstatus" : 1},
+
+          { "method": "POST", "path": "/api/share/app/mch/fichar", "filterstatus": 1 },
+
+          { "method": "GET", "path": "/api/share/data/totaldata", "filterstatus": 1 },
+          {"method" : "POST", "path": "/api/share/vacaciones", "filterstatus": 1},
+          {"method" : "GET", "path": "/api/share/vacaciones", "filterstatus": 1},
+          {"method" : "GET", "path": "/api/share/vacaciones/[id]", "filterstatus": 1},
+          {"method" : "PATCH", "path": "/api/share/vacaciones/[id]", "filterstatus": 1}
+
+
+    ],"aticmaster": [
+          { "method": "GET", "path": "/api/share/app/mch/apartments", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/app/mch/apartments/details/devices/locks", "filterstatus": 1 },
+          { "method": "POST", "path": "/api/share/app/mch/apartments/[id]/devices/[id]/actions", "filterstatus": 1 },
+
+          { "method": "GET", "path": "/api/reports/roleade/controlhorario", "filterstatus": 0 },
+
+          { "method": "GET", "path": "/api/share/profile", "filterstatus": 1 },
+
+          { "method": "GET", "path": "/api/share/apartments", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/p/apartments", "filterstatus": 1 },
+
+          { "method": "GET", "path": "/api/dn/users/responsables", "filterstatus": 0 },
+          
+          { "method": "POST", "path": "/api/dn/leads/responsables", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/dn/leads/responsables/[id]", "filterstatus": -1 },
+          { "method": "PATCH", "path": "/api/dn/leads/responsables/[id]", "filterstatus": -1 },
+
+          { "method": "GET", "path": "/api/share/data/totaldata", "filterstatus": -1 },
+
+          { "method": "GET", "path": "/api/share/data/dataselect", "filterstatus": -1 },
+
+          { "method": "GET", "path": "/api/dn/p/responsables", "filterstatus": -1 },
+          { "method": "GET", "path": "/api/atic/p/devices", "filterstatus": -1 },
+          { "method": "GET", "path": "/api/atic/devices/report", "filterstatus": -1 },
+          { "method": "POST", "path": "/api/atic/devices/report", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/atic/p/reportdevices", "filterstatus": 1 },
+          { "method": "PATCH", "path": "/api/atic/p/devices/[id]", "filterstatus" : -1},
+          { "method" : "PATCH" , "path" : "/api/atic/devices/report/[id]/details/[id]" , "filterstatus": 0},
+          { "method": "GET", "path": "/api/reports/ratic/devicereport/[id]", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/reportdevices/lastreport", "filterstatus" : 1},
+
+          { "method" : "POST" , "path" : "/api/atic/devices/crud" , "filterstatus" : 1},
+          { "method" : "PATCH" , "path" : "/api/atic/devices/crud/[id]" , "filterstatus" : 1},
+          { "method" : "DELETE" , "path" : "/api/atic/devices/crud/[id]" , "filterstatus" : 1},
+          { "method" : "GET" , "path" : "/api/atic/devices/crud/[id]" , "filterstatus" : 1},
+          { "method" : "POST" , "path": "/api/dn/estadisticas/estadistica" , "filterstatus" : 1},
+          { "method" : "POST" , "path": "/api/dn/estadisticas/estadistica" , "filterstatus" : 1},
+          { "method" : "GET" , "path": "/api/atic/p/keys" , "filterstatus" : -1},
+          { "method" : "POST" , "path" : "/api/atic/p/keys" , "filterstatus" : 1 },
+          { "method" : "PATCH" , "path" : "/api/atic/p/keys/[id]" , "filterstatus" : 1},
+          { "method" : "DELETE" , "path" : "/api/atic/p/keys/[id]" , "filterstatus" : 1},
+          { "method" : "GET" , "path" : "/api/atic/p/keys/[id]" , "filterstatus" : 1},
+          { "method": "POST", "path": "/api/share/app/mch/fichar", "filterstatus": 1 },
+          { "method": "POST", "path": "/api/public/fichar/validatetokenqr", "filterstatus": 1 },
+
+          {"method" : "POST", "path": "/api/share/vacaciones", "filterstatus": 1},
+          {"method" : "GET", "path": "/api/share/vacaciones", "filterstatus": 1},
+          {"method" : "GET", "path": "/api/share/vacaciones/[id]", "filterstatus": 1},
+          {"method" : "PATCH", "path": "/api/share/vacaciones/[id]", "filterstatus": 1}
+
+    ], 
+    "rmgmaster": [
+          { "method": "GET", "path": "/api/share/app/mch/apartments", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/app/mch/apartments/details/devices/locks", "filterstatus": 1 },
+
+          { "method": "GET", "path": "/api/share/profile", "filterstatus": 1 },
+
+          { "method": "GET", "path": "/api/share/plataformacomercial", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/tipoestancia", "filterstatus": 1 },
+
+          { "method": "GET", "path": "/api/rmg/apartments/[id]/infocomercial", "filterstatus": 1 },
+          { "method": "POST", "path": "/api/rmg/apartments/[id]/infocomercial", "filterstatus": 1 },
+          { "method": "PATCH", "path": "/api/rmg/apartments/[id]/infocomercial", "filterstatus": 1 },
+
+          { "method": "GET", "path": "/api/share/apartments", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/p/apartments", "filterstatus": 1 },
+
+          { "method": "GET", "path": "/api/rmg/infocomercial", "filterstatus": 1 },
+          { "method": "POST", "path": "/api/rmg/infocomercial", "filterstatus": 1 },
+          { "method": "PATCH", "path": "/api/rmg/infocomercial", "filterstatus": 1 },
+
+          { "method": "GET", "path": "/api/rmg/apartments/[id]/variablesreserva", "filterstatus": 1 },
+          { "method": "PATCH", "path": "/api/rmg/apartments/[id]/infocomercial/[id]/variablesreserva", "filterstatus": 1 },
+
+          { "method": "POST", "path": "/api/share/app/mch/apartments/[id]/devices/[id]/actions", "filterstatus": 1 },
+
+          { "method": "GET", "path": "/api/reports/ratic/devicereport/[id]", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/reportdevices/lastreport", "filterstatus" : 1},
+
+          { "method": "POST", "path": "/api/share/app/mch/fichar", "filterstatus": 1 },
+
+
+          { "method" : "GET" , "path" : "/api/rmg/p/apartments" , "filterstatus": 1},
+          { "method": "GET", "path": "/api/share/data/totaldata", "filterstatus": 1 },
+
+          {"method" : "POST", "path": "/api/share/vacaciones", "filterstatus": 1},
+          {"method" : "GET", "path": "/api/share/vacaciones", "filterstatus": 1},
+          {"method" : "GET", "path": "/api/share/vacaciones/[id]", "filterstatus": 1},
+          {"method" : "PATCH", "path": "/api/share/vacaciones/[id]", "filterstatus": 1},
+
+          {"method" : "GET", "path": "/api/rmg/p/solicitudes/limiteprecio", "filterstatus": 1},
+          {"method" : "GET", "path": "/api/rmg/limiteprecio/[id]", "filterstatus": 1},
+          {"method" : "PATCH", "path": "/api/rmg/limiteprecio/[id]/aprobar", "filterstatus": 1},
+          {"method" : "PATCH", "path": "/api/rmg/limiteprecio/[id]/rechazar", "filterstatus": 1}
+    ],
+    "damaster": [
+          { "method": "GET", "path": "/api/share/profile", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/app/mch/apartments/details/devices/locks", "filterstatus": 1 },
+
+          { "method": "GET", "path": "/api/da/apartments", "filterstatus": 0 },
+          { "method": "POST", "path": "/api/da/apartments", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/da/apartments/[id]", "filterstatus": 0 },
+          { "method": "PATCH", "path": "/api/da/apartments/[id]", "filterstatus": 0 },
+          { "method": "DELETE", "path": "/api/da/apartments/[id]", "filterstatus": 0 },
+          
+          {"method" : "GET" , "path" : "/api/share/apartments" , "filterstatus" : 1},
+          { "method": "GET", "path": "/api/share/p/apartments", "filterstatus": 1 },
+
+          {"method" : "GET", "path" : "/api/da/p/apartments", "filterstatus": 1},
+
+          { "method": "GET", "path": "/api/share/users/propietarios", "filterstatus": 1 },
+
+          { "method": "GET", "path": "/api/share/app/mch/apartments", "filterstatus": 1 },
+          { "method": "POST", "path": "/api/share/app/mch/apartments/[id]/devices/[id]/actions", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/da/dispositivos/disponibles", "filterstatus": 1 },
+
+          { "method": "PATCH", "path": "/api/da/apartments/[id]/associate_devices", "filterstatus":1  },
+
+          { "method": "GET", "path": "/api/reports/ratic/devicereport/[id]", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/reportdevices/lastreport", "filterstatus" : 1},
+
+
+          { "method" : "GET", "path" : "/api/da/articulos", "filterstatus" : 0},
+          { "method" : "POST" , "path": "/api/da/articulos" , "filterstatus" : 1},
+          { "method" : "PATCH", "path": "/api/da/articulos/[id]", "filterstatus" : 0},
+          { "method" : "DELETE", "path" : "/api/da/articulos/[id]" , "filterstatus": 0},
+          { "method" : "GET", "path" : "/api/da/articulos/p/articulos" , "filterstatus" : 0},
+
+
+          { "method" : "GET", "path" : "/api/da/inventario/p/inventario" ,  "filterstatus" : 0},
+          { "method" : "GET", "path" : "/api/da/inventario/piso/[id]" ,  "filterstatus" : 0},
+          { "method" : "PATCH", "path" : "/api/da/inventario" ,  "filterstatus" : 0}, 
+          { "method" : "PATCH", "path" : "/api/da/inventario/articuloComprado" , "filterstatus" : 0}, 
+          { "method" : "PATCH" , "path" : "/api/da/inventario/reparar" , "filterstatus" : 0}, 
+          { "method" : "PATCH" , "path" : "/api/da/inventario/roto" , "filterstatus" : 0},
+          
+
+          { "method": "PATCH", "path": "/api/da/apartments/[id]/associate_devices", "filterstatus":1  },
+          { "method": "GET", "path": "/api/share/data/totaldata", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/data/dataselect", "filterstatus": 1 },
+
+          { "method": "GET", "path": "/api/da/apartments/[id]/devices/asociar", "filterstatus": -1 },
+
+          { "method": "POST", "path": "/api/share/app/mch/fichar", "filterstatus": 1 },
+
+          {"method" : "POST", "path": "/api/share/vacaciones", "filterstatus": 1},
+          {"method" : "GET", "path": "/api/share/vacaciones", "filterstatus": 1},
+          {"method" : "GET", "path": "/api/share/vacaciones/[id]", "filterstatus": 1},
+          {"method" : "PATCH", "path": "/api/share/vacaciones/[id]", "filterstatus": 1}
+
+    ],
+     "ademaster": [
+          { "method": "GET", "path": "/api/share/profile", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/app/mch/apartments/details/devices/locks", "filterstatus": 1 },
+
+          { "method": "GET", "path": "/api/share/data/totaldata", "filterstatus": 0 },
+          { "method": "GET", "path": "/api/ade/p/controlhorario", "filterstatus": 0 },
+
+          { "method": "GET", "path": "/api/share/data/dataselect", "filterstatus": 0 },
+          { "method": "GET", "path": "/api/ade/controlhorario/[id]", "filterstatus": 0 },
+          { "method": "POST", "path": "/api/ade/controlhorario", "filterstatus": 1 },
+          { "method": "PATCH", "path": "/api/ade/controlhorario/[id]", "filterstatus": 0 },
+          { "method": "DELETE", "path": "/api/ade/controlhorario/[id]", "filterstatus": 0 },
+
+          { "method": "GET", "path": "/api/reports/roleade/controlhorario", "filterstatus": 0 },
+          { "method": "GET", "path": "/api/reports/roleade/users/[id]/controlhorario", "filterstatus": 0 },
+          { "method": "GET", "path": "/api/share/users/ulimpieza", "filterstatus": 0 },
+          
+          { "method": "GET", "path": "/api/share/app/mch/apartments", "filterstatus": 1 },
+          { "method": "POST", "path": "/api/share/app/mch/apartments/[id]/devices/[id]/actions", "filterstatus": 1 },
+
+          { "method": "GET", "path": "/api/share/apartments", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/p/apartments", "filterstatus": 1 },
+
+
+          { "method": "GET", "path": "/api/reports/ratic/devicereport/[id]", "filterstatus": 1 },
+          { "method": "GET", "path": "/api/share/reportdevices/lastreport", "filterstatus" : 1},
+
+          { "method": "POST", "path": "/api/share/app/mch/fichar", "filterstatus": 1 },
+
+          {"method" : "POST", "path": "/api/share/vacaciones", "filterstatus": 1},
+          {"method" : "GET", "path": "/api/share/vacaciones", "filterstatus": 1},
+          {"method" : "GET", "path": "/api/share/vacaciones/[id]", "filterstatus": 1},
+          {"method" : "PATCH", "path": "/api/share/vacaciones/[id]", "filterstatus": 1}
+
+    ]
+
+
+
+}

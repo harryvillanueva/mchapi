@@ -1,0 +1,269 @@
+.c-bg-primary {
+    background-color: #0077BD;
+
+}
+
+.c-btn-primary {
+    background-color: #0077BD;
+    color: white;
+}
+
+.c-btn-primary:hover {
+    background-color: #015e93;
+    color: white;
+}
+
+.c-bg-secondary {
+    --bs-bg-opacity: 1;
+    background-color: #bbdaed !important;
+}
+
+
+.c-shadow-large {
+
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.20);
+
+}
+
+.c-bg-opacity {
+    background-color: rgba(255, 255, 255, 0.09)
+}
+
+.c-bg-main-opac {
+
+    background-image: url(/img/bg/mBgOpac100.svg);
+    background-attachment: fixed;
+}
+
+.c-bg-main {
+
+    background-image: url(/img/bg/mBg.svg);
+    background-attachment: fixed;
+}
+
+.c-bg-main-100 {
+    background-image: url(/img/bg/mBg100.svg);
+    background-attachment: fixed;
+}
+
+.c-rounded-large {
+    border-radius: 0.8rem;
+}
+
+.c-text-primary {
+    color: #015e93 !important;
+}
+
+.c-h-100 {
+    height: 100vh;
+}
+
+.c-h-85 {
+    height: 85vh;
+}
+
+.c-h-15 {
+    height: 15vh;
+}
+
+.c-hp-98 {
+    height: 98%;
+}
+
+.c-mx-100 {
+    margin-left: 200px;
+}
+
+.c-login-form {
+    height: 33rem;
+    width: 33rem;
+    margin-top: 16.5vh;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    background-color: rgba(112, 112, 112, 0.2);
+}
+
+.c-form-input {
+    width: 80%;
+    margin-left: 10%;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+
+}
+
+.c-w-100 {
+    width: 100%;
+}
+
+.c-mt-2_5 {
+    margin-top: 1rem;
+}
+
+.c-mt-4_5 {
+    margin-top: 1.5rem !important;
+}
+
+.c-bg-0 {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+
+.nav-item:hover {
+    color: black;
+    scale: 105%;
+    transition: 100ms;
+}
+
+.c-btnLogin {
+    transform: rotate(0deg);
+    transition: 300ms;
+}
+
+.c-btnLogin:hover {
+    transform: rotate(90deg);
+}
+
+.c-logo-login {
+    margin-top: 2.3rem;
+    margin-bottom: 0.6rem;
+}
+
+.c-scale-105:hover {
+    scale: 105%;
+}
+
+.c-w-10 {
+    width: 6rem;
+}
+
+.c-pl-2 {
+    padding-left: 1rem;
+}
+
+.c-rounded-left {
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+
+.tbl-btn-action {
+    cursor: pointer;
+}
+
+.card-action {
+    cursor: pointer;
+}
+
+.btnContent button {
+    margin-right: 15px;
+}
+
+div.tbl-body > div:nth-child(even) {
+    background-color: white;
+}
+
+div.tbl-body > div:nth-child(odd) {
+    background-color: #badaed;
+}
+
+div.tbl-body div.content-actions a:hover {
+    color: black;
+}
+
+.text-blue {
+    color: #0077BD;
+}
+
+.txt-green {
+    color: #198754;
+}
+
+.txt-red {
+    color: #dc3545;
+}
+
+.txt-red-c62608 {
+    color: #c62608
+}
+
+.txt-orange-f3bb6d {
+    color: #bb7616fa
+}
+
+.bg-red {
+    background-color: #dc3545;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.bg-blue {
+    background-color: #0077BD;
+}
+
+a.link-menu {
+    padding: 8px;
+    font-size: 14px;
+}
+
+.border-blue {
+    border-color: #0077BD;
+}
+
+.field-required, span.field-required {
+    font-weight: bold !important;
+    color: 'red' !important;
+}
+
+.text-wraper-tbl {
+    overflow-wrap: anywhere;
+}
+
+.text-wraper {
+    overflow-wrap: anywhere;
+}
+
+.data-table-row:hover {
+    border: 1px solid #0077BD;
+    cursor: pointer;
+}
+
+/* Works for Chrome, Safari, Edge, Opera */
+.noArrows::-webkit-outer-spin-button,
+.noArrows::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Works for Firefox */
+.noArrows[type="number"] {
+  -moz-appearance: textfield;
+}
+
+::-webkit-input-placeholder {
+    font-style: italic;
+}
+:-moz-placeholder {
+    font-style: italic;  
+}
+::-moz-placeholder {
+    font-style: italic;  
+}
+:-ms-input-placeholder {  
+    font-style: italic; 
+}
+
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.display-icon-error {
+    display: inline-flex;
+}
