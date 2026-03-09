@@ -6,8 +6,8 @@ class EWeLink {
     public region = 'eu'
     public domain = 'eu-apia.coolkit.cc'
     public familyId = '60ec2a2e860d94000952f43a'
-    public appId = 'BC3XM7gFuqd8oKAfgL5Lh7TmDrVzuzWo' // hola soy jaqui debes de borrar la app id antes en ewelink dev de ahi creas una nueva app y cambias estos parametros luego debes autentificar como en el tutorial
-    public appSecret = 'wm3JlA1UrTLjH0LYv4akYCRbeC4xMrV8'
+    public appId = 'nEbQNXDsW1em0jN3Z2t9MMOrBoLBfTgD' // hola soy jaqui debes de borrar la app id antes en ewelink dev de ahi creas una nueva app y cambias estos parametros luego debes autentificar como en el tutorial
+    public appSecret = 'X3RgnRo7lpSXqtpiUdzZg0hrlu96zcVg'
 
     constructor() {}
 
@@ -289,7 +289,13 @@ class EWeLink {
             let _result = response.data as resulteWeLink
             if ( _result.error === 4002 ) _result.msg = 'Dispositivo desconectado'
             result = { ...result, error: _result.error, msg: _result.msg }
-        } catch (error) {}
+        } catch (error) {
+            console.error('🔴 [EWELINK] Error general al intentar abrir la puerta:', error instanceof Error ? error.message : error);
+            // Comprobamos si es un error de Axios para que TypeScript nos deje leer el response
+            if (axios.isAxiosError(error)) {
+                console.error('🔴 [EWELINK] Detalle del rechazo de eWeLink:', error.response?.status, error.response?.data);
+            }
+        }
 
         return result
     }
