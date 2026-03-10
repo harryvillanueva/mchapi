@@ -232,72 +232,65 @@ class EWeLink {
         return result
     }
 
-    async setStatus(token: string, idDevice: string): Promise<resulteWeLink> {
-        const statusDevice = await EWeLinkInstance.getCurrentStatus(token, idDevice)
+  async setStatus(token: string, idDevice: string): Promise<resulteWeLink> {
+        let result: resulteWeLink = { error: -1, msg: 'Error desconocido!!' };
+        
+        // 1. OBTENER EL ESTADO ACTUAL PARA SABER SI HAY QUE APAGAR O ENCENDER
+        const statusDevice = await EWeLinkInstance.getCurrentStatus(token, idDevice);
+        if (statusDevice.error !== 0) return statusDevice;
 
-        // Validar que tengamos datos del dispositivo
-        if (!statusDevice.data || !statusDevice.data.params) {
-            return {
-                error: 404,
-                msg: 'Dispositivo no encontrado o sin datos',
-                data: undefined
-            }
-        }
+        let path = `https://${EWeLinkInstance.domain}/v2/device/thing/status`;
+        
+        const headers: Record<string, string> = {
+            'X-CK-Appid': 'nEbQNXDsW1em0jN3Z2t9MMOrBoLBfTgD',
+            'X-CK-Nonce': `${Math.random().toString(36).substring(2, 10)}`,
+            'Authorization': `Bearer ${token}`,
+            'Content-Type': 'application/json'
+        };
 
-        // Validar para valores
-        let _status = statusDevice.data.params.switch
-        let _online = statusDevice.data.online
-        let _valStatus = _online ? ( _status === 'on' ? 'off' : 'on' ) : 'off'
+        // 2. CONFIGURAR LA ORDEN CONTRARIA (Toggle)
+        let data1CH: any = { type: 1, id: idDevice, params: {} };
+        let dataMultiCH: any = { type: 1, id: idDevice, params: {} };
 
-        let path = `https://${EWeLinkInstance.domain}/v2/device/thing/status`
+        // Extraemos params de forma segura engañando a TypeScript con 'any'
+        const currentParams: any = statusDevice.data?.params || {};
 
-        let result: resulteWeLink = {
-            error: -1,
-            msg: 'Error desconocido!!',
-            data: {
-                name: statusDevice.data.name,
-                deviceid: statusDevice.data.deviceid,
-                online: statusDevice.data.online,
-                params:
-                {
-                    switch: _valStatus,
-                    pulse: statusDevice.data.params.pulse
-                }
-            }
-        }
-
-        let data = {
-            type: 1,
-            id: idDevice,
-            params: {
-                switch: _valStatus
-            }
+        if (currentParams.switches) {
+            // Dispositivo Multicanal
+            let currentState = currentParams.switches[0].switch;
+            let targetState = currentState === 'on' ? 'off' : 'on';
+            dataMultiCH.params.switches = [{ outlet: 0, switch: targetState }];
+            
+            // Lógica forzada de "pulso" para portales
+            data1CH.params.switch = 'on'; 
+        } else {
+            // Dispositivo 1 Canal (La luz normal)
+            let currentState = currentParams.switch || 'off';
+            let targetState = currentState === 'on' ? 'off' : 'on';
+            data1CH.params.switch = targetState;
+            dataMultiCH.params.switches = [{ outlet: 0, switch: targetState }];
         }
 
         try {
-            const _config = {
-                url: `${path}`,
-                method: 'POST',
-                headers: {
-                    'X-CK-Nonce': `${EWeLinkInstance.randomWord(8)}`,
-                    'Authorization': `Bearer ${token}`,
-                    'Content-Type': 'application/json'
-                },
-                data: JSON.stringify(data),
-            };
-            const response = await axios(_config)
-            let _result = response.data as resulteWeLink
-            if ( _result.error === 4002 ) _result.msg = 'Dispositivo desconectado'
-            result = { ...result, error: _result.error, msg: _result.msg }
-        } catch (error) {
-            console.error('🔴 [EWELINK] Error general al intentar abrir la puerta:', error instanceof Error ? error.message : error);
-            // Comprobamos si es un error de Axios para que TypeScript nos deje leer el response
-            if (axios.isAxiosError(error)) {
-                console.error('🔴 [EWELINK] Detalle del rechazo de eWeLink:', error.response?.status, error.response?.data);
+            console.log(`[EWELINK] Solicitando cambio de estado...`);
+            let response = await axios({ url: path, method: 'POST', headers, data: JSON.stringify(data1CH) });
+            let _result = response.data as resulteWeLink;
+            
+            // Si rechaza con 4002, reintentamos con el formato multicanal
+            if (_result.error === 4002) {
+                console.log(`[EWELINK] Rechazado. Reintentando formato multicanal...`);
+                headers['X-CK-Nonce'] = `${Math.random().toString(36).substring(2, 10)}`;
+                response = await axios({ url: path, method: 'POST', headers, data: JSON.stringify(dataMultiCH) });
+                _result = response.data as resulteWeLink;
             }
+            
+            result = { ...result, error: _result.error, msg: _result.msg, data: _result.data };
+
+        } catch (error) {
+            console.error('🔴 [EWELINK] Error crítico:', error instanceof Error ? error.message : error);
         }
 
-        return result
+        return result;
     }
 
     async refreshToken(refreshToken: string): Promise<resulteWeLink> {
