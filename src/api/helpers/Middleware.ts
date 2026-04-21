@@ -39,10 +39,11 @@ class Middleware {
                         }
 
                         if (token) {
-                              const { status, iduser, username } = UtilInstance.checkToken(token)
+                              const { status, iduser, username, roles } = UtilInstance.checkToken(token)
                               if (status && iduser) {
                                     req.headers.iduser = iduser!.toString()
                                     req.headers.username = username!.toString()
+                                    if (roles) req.headers.roles = roles!.toString()
                                     console.debug('verifyToken: token valid, iduser=', req.headers.iduser)
                                     next()
                                     return
@@ -86,9 +87,11 @@ class Middleware {
                         console.error('verifyToken parse error', err)
                   }
 
-                  // Fallback: mantener comportamiento anterior (desarrollo)
+                  // Fallback: mantenimiento modo permisivo para permitir acceso
+                  // a clientes sin token válido (abre permisos para pruebas).
                   req.headers.iduser = '1';
                   req.headers.username = 'test';
+                  req.headers.roles = 'superadmin';
                   next();
       }
 

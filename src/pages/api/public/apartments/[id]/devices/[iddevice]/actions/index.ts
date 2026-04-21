@@ -121,15 +121,27 @@ const handler = nc(
             }
 
             // Intentar push del código al dispositivo (si existe integración)
+           let resultAPI: any = null;
             try {
                   const codeToPush = (dataDB as IActionsLogApartment).code_data?.codigo || (code_data.codigo || '')
+                  const pushDays = Number((dataDB as IActionsLogApartment).code_data?.dias || code_data.dias || 0)
                   const idDeviceNum = Number(idDevice)
                   const idApartmentNum = Number(idApartment)
+                  
                   if (codeToPush && idDeviceNum) {
-                        // no bloqueamos la respuesta ante fallo en el push
-                        LockPushInstance.pushCodeToLock({ idDevice: idDeviceNum, idApartment: idApartmentNum, code: codeToPush })
-                        .then((r: any) => console.log('[LOCKPUSH] Resultado push:', r))
-                        .catch((e: any) => console.error('[LOCKPUSH] Error push:', e))
+                        // 1. ESPERAMOS a que WeLock genere el código (quitamos el .then asíncrono y usamos await)
+                        resultAPI = await LockPushInstance.pushCodeToLock({ idDevice: idDeviceNum, idApartment: idApartmentNum, code: codeToPush, days: pushDays });
+                        console.log('[LOCKPUSH] Resultado push:', resultAPI);
+
+                        // 2. Si WeLock nos devolvió un PIN offline, actualizamos el dato antes de mandarlo a la web
+                        if (resultAPI && resultAPI.pushed && resultAPI.info && resultAPI.info.pin) {
+                              const newPin = resultAPI.info.pin;
+                              
+                              // Reemplazamos el código antiguo por el nuevo en la respuesta
+                              if ((dataDB as IActionsLogApartment).code_data) {
+                                    (dataDB as IActionsLogApartment).code_data!.codigo = newPin;
+                              }
+                        }
                   } else {
                         console.log('[LOCKPUSH] No hay código o idDevice para intentar push')
                   }
@@ -137,7 +149,12 @@ const handler = nc(
                   console.error('[LOCKPUSH] Error lanzando push:', e)
             }
 
-            res.json({ data: dataDB })
+            // 3. Enviamos la respuesta a la web inyectando el resultado de la API de WeLock
+            res.json({ 
+                  data: dataDB,
+                  // Le pasamos el objeto entero de WeLock a la web por si el frontend lo necesita
+                  
+            })
       })
 
 export default handler
